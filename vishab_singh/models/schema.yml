@@ -1,0 +1,14 @@
+version: 2
+
+models:
+  - name: employee
+    columns: 
+      - name: first_name
+        tests:
+          - unique
+          - not_null
+
+      - name: id
+        tests:
+          - unique
+          - not_null
