@@ -34,4 +34,17 @@ clean-targets:         # directories to be removed by `dbt clean`
 models:
   vishab_singh:
     +materialized: table
+
+seeds:
+  vishab_singh:
+    +enabled: true
+    +schema: seed_data
+
+    country_codes:
+      +column_types:
+        country_code: varchar(2)
+        latitude: varchar(32)
+        longitude: varchar(32)
+        country_name: varchar(64)
+
       
